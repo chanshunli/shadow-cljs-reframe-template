@@ -18,6 +18,9 @@
   (reagent/render [views/app-root]
                   (.getElementById js/document "app")))
 
+;; (js/alert 321312)
+;; http://localhost:8280/ 弹窗出来
+
 (defn ^:export init []
   (dev-setup)
   (re-frame/dispatch-sync [::events/initialize-db])
